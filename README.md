@@ -1,17 +1,22 @@
 # CloudSync Pro - Marketing Website
 
-A modern, high-conversion marketing website for CloudSync Pro built with React, Vite, and Tailwind CSS.
+![React](https://img.shields.io/badge/React-18.3.1-blue)
+![Vite](https://img.shields.io/badge/Vite-5.3.1-646CFF)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.4-38B2AC)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+A modern, high-conversion marketing website for CloudSync Pro - AI-powered cloud storage and collaboration platform built with React, Vite, and Tailwind CSS.
 
 ## Features
 
 - 🚀 Built with React 18 + Vite
-- 🎨 Styled with Tailwind CSS
+- 🎨 Styled with Tailwind CSS, Beautiful, responsive design
 - 📱 Fully responsive design
 - 🔄 React Router for navigation
 - 📝 Form handling with React Hook Form
 - 🌐 API integrations (Unsplash, Web3Forms)
 - ⚡ Fast and optimized
-- ♿ Accessible
+- ♿ Fully accessible
 
 ## Prerequisites
 
