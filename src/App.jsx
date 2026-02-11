@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -44,10 +44,10 @@ function App() {
 // 404 Page Component
 function NotFound() {
   return (
-    <div className="section-container text-center">
+    <div className="section-container text-center pt-20">
       <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
       <p className="text-xl text-gray-600 mb-8">Page not found</p>
-      <a href="/" className="btn-primary inline-block">Go Home</a>
+      <Link to="/" className="btn-primary inline-block">Go Home</Link>
     </div>
   )
 }
