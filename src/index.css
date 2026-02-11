@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* Keep your existing theme colors from before */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1e40af;
+  --color-primary-light: #3b82f6;
+
+  --color-secondary: #7c3aed;
+  --color-secondary-dark: #6d28d9;
+  --color-secondary-light: #8b5cf6;
+
+  --color-accent: #10b981;
+  --color-accent-dark: #059669;
+  --color-accent-light: #34d399;
+
+  --font-sans: "Inter", "system-ui", "sans-serif";
+}
+
+/* Base Styles (v4 way) */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-sans antialiased bg-gray-50 text-gray-900;
+  }
+}
+
+/* Component Classes */
+@utility btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-primary to-primary-light text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+@utility btn-secondary {
+  @apply px-6 py-3 bg-white text-primary font-semibold rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+@utility btn-accent {
+  @apply px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+}
+
+@utility section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+}
+
+@utility card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6;
+}
+
+@utility input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+}
+
+@utility gradient-text {
+  @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+}
+
+/* Animations (Modern CSS way) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@utility animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
