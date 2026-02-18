@@ -30,8 +30,14 @@ const Navbar = () => {
   ]
 
   return (
+    /* Updated Logic: 
+       The background is white if the user has scrolled OR if the mobile menu is open. 
+       Otherwise, it stays transparent.
+    */
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
+      isScrolled || isOpen 
+        ? 'bg-white shadow-md py-4' 
+        : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
